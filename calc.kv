@@ -1,0 +1,172 @@
+<CalcEvent@MDRaisedButton>:
+    elevation_normal: 2
+    opposite_colors: True
+    font_size: '42sp'
+
+
+<Container>:
+    rows: 3
+    output_field: output_field
+
+    AnchorLayout:
+        anchor_y: 'top'
+        size_hint: 1, 0.2
+        padding: [15, 0, 15, 0]
+
+        MDLabel:
+            text: '0'
+            id: output_field
+            font_size: '52sp'
+            halign: 'right'
+
+
+    GridLayout:
+        rows: 4
+
+        GridLayout:
+            cols: 4
+
+            CalcEvent:
+                text: "7"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('7')
+
+            CalcEvent:
+                text: "8"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('8')
+
+            CalcEvent:
+                text: "9"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('9')
+
+            CalcEvent:
+                text: "*"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.multiplication()
+
+        GridLayout:
+            cols: 4
+
+            CalcEvent:
+                text: "4"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('4')
+
+            CalcEvent:
+                text: "5"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('5')
+
+            CalcEvent:
+                text: "6"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('6')
+
+            CalcEvent:
+                text: "/"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.division()
+
+        GridLayout:
+            cols: 4
+
+            CalcEvent:
+                text: "1"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('1')
+
+            CalcEvent:
+                text: "2"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('2')
+
+            CalcEvent:
+                text: "3"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('3')
+
+            CalcEvent:
+                text: "-"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.subtraction()
+
+        GridLayout:
+            cols: 4
+
+            CalcEvent:
+                text: "0"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.add_number('0')
+
+            CalcEvent:
+                text: "."
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.change_to_float()
+
+            CalcEvent:
+                text: "AC"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.clear()
+
+            CalcEvent:
+                text: "+"
+                md_bg_color: 1, 0, 0, 1
+                size_hint: 1, 1
+                on_release:
+                    root.addition()
+
+    GridLayout:
+        cols: 2
+        size_hint: 1, 0.2
+
+        MDRaisedButton:
+            size_hint: 1, 1
+            text: '='
+            elevation_normal: 2
+            text_color: 1, 1, 1, 1
+            md_bg_color: 1, 0, 0, 1
+            font_size: '42sp'
+            on_release:
+                root.result_of_operation()
+
+        MDRaisedButton:
+            size_hint: 0.33, 1
+            text: '+/-'
+            elevation_normal: 2
+            text_color: 1, 1, 1, 1
+            md_bg_color: 1, 0, 0, 1
+            font_size: '42sp'
+            on_release:
+                root.change_sign()
