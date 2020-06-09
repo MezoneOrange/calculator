@@ -1,5 +1,5 @@
 # Arithmetic calculator on Kivy  
-###### Kivy project from "Python developer" course in programming school "IT technologies itProger"  
+###### Kivy project from "Python developer" course in programming school "IT technologies itProger" https://itproger.com  
 
 In the app realised arithmetic calculator.
 
